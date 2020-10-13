@@ -14,3 +14,49 @@ img {
 	max-width: 100%;
 	height: auto;
 }
+
+.global-width{
+	max-width: 620px; /* max-width로 하는것은 스마트폰 화면으로 볼 때 때무네 */
+	margin: 0 auto;
+	padding: 0 16px;
+}
+
+.scroll-graphic{
+	position: sticky;
+	top: 0;
+	height: 100vh;
+}
+
+.graphic-item{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.visible{
+	opacity: 1;
+}
+
+.scene-img{
+	max-height: 100vh;
+}
+
+.scroll-text{
+	position: relative; /* position이 static이 아니면 html상 더 아래쪽에 코딩된뇨속이 zindex상 위로온다 */
+	padding-bottom: 1px;
+}
+
+.step{
+	margin-bottom: 60vh; /* vh는 창 크기 기준, rem은 폰트 크기 기준 */
+	padding: 0.5rem 1rem;
+	border-radius: 10px;
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px;
+}
