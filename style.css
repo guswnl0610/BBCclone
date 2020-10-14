@@ -25,6 +25,7 @@ img {
 	position: sticky;
 	top: 0;
 	height: 100vh;
+	overflow-x: hidden;
 }
 
 .graphic-item{
@@ -38,6 +39,7 @@ img {
 	height: 100%;
 	opacity: 0;
 	transition: 0.5s;
+	will-change: opacity; /* 투명도가 바뀔거라고 미리 알려주는거임 */
 }
 
 .visible{
@@ -59,4 +61,27 @@ img {
 	border-radius: 10px;
 	background: rgba(255, 255, 255, 0.8);
 	box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px;
+}
+
+.bird{
+	position: absolute;
+	left: 0;
+	bottom: 70%;
+	width: 100px;
+	transform: translateX(-100%);
+	transition: 1.5s 0.5s linear; /* 0.5초 후에 1.5초동안 새를 움직이세요 */
+}
+
+[data-index="5"] .bird{
+	left: 30%;
+	bottom: 30%;
+}
+
+.global-footer{
+	padding: 2rem 0;
+	text-align: center;
+}
+
+.strikethrough{
+	text-decoration: line-through;
 }
